@@ -3,11 +3,15 @@
     margin: 0;
     padding: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     font-size: 16px;
     color: #FFF;
     font-family: 'Quicksand', sans-serif;
+    width: 100vw;
 }
 
 
@@ -17,13 +21,13 @@ p {
 
 #header-nav {
     background-color: #7952B3;
-    color: #00203FFF;
+    color: whitesmoke;
     border-radius: 0;
     border: 0;
 }
 
 .navbar-brand h1 {
-    color: #212529;
+    color: whitesmoke;
     font-size: 3.5rem;
     font-weight: bold;
     margin-top: -15px;
@@ -33,7 +37,9 @@ p {
     border: 1px solid #00203FFF;
     color: #FFE484;
 }
-
+span.icon-bar{
+    color: #FFE484;
+}
 
 #nav-list li {
     font-size: 30px;
@@ -48,6 +54,12 @@ p {
     padding-bottom: 0;
 }
 
+#collapsable-nav a{
+    text-decoration: none;
+}
+
+
+
 #main-content {
     height: 150vh;
 }
@@ -59,8 +71,16 @@ p {
 }
 
 #main-section {
+    margin: 0 0 0 0;
+    color: whitesmoke;
+}
+
+.content{
     background-color: #7952B3;
-    color: #212529;
+    padding: 7px;
+    margin: 10px;
+    width: 30%;
+    border: 3px solid  #FFE484;
 }
 
 @media (max-width: 767px) {
@@ -70,8 +90,17 @@ p {
     }
     
     .col-xs-12{
-            width: 100vw;
+            width: 100%;
         }
+    
+    #collapsable-nav a li.visible-xs:hover{
+    transform: scale(1.2);
+    -webkit- transform: scale(1.20);
+    -moz-  transform: scale(1.20);
+    -o-  transform: scale(1.20);
+    
+        
+}
 }
 
 @media (min-width: 768px) and (max-width: 991px)
@@ -81,6 +110,8 @@ p {
 }
 
 @media (min-width: 1200px)
-.col-lg-12{
-    width: 100%
+p > .col-lg-4 {
+    float: left;
+    width: 30.33%;
+    padding: 20px;
 }
